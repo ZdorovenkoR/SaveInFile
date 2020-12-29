@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Ввести с клавиатуры произвольный набор данных и сохранить его в текстовый файл.
+//Ввести с клавиатуры произвольный набор данных и сохранить его в текстовый файл..
 
 namespace SaveInFile
 {
@@ -12,7 +12,12 @@ namespace SaveInFile
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Введите данные");
+            string userData = Console.ReadLine();
+            StreamWriter userData2 = new StreamWriter("test.txt", true); ;
+            userData2.WriteLine(userData);
+            userData2.Close();
+            Console.WriteLine("Данные сохранены");
         }
     }
 }
